@@ -1,0 +1,544 @@
+FULL DEBUG (LC-Driven): synthetic_100_5sp_dag
+Format: [LC xxxx][PC xxxx] -> Ops
+================================================================================
+[LC 0001][PC 0001]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(0), Update(1), Update(2), Update(3), Update(4), Update(5), Update(6), Update(7), Update(8), Update(10)
+    -> PE: Update(0)       [LC:1]
+    -> PE: Update(1)       [LC:1]
+    -> PE: Update(2)       [LC:1]
+    -> PE: Update(3)       [LC:1]
+    -> PE: Update(4)       [LC:1]
+    -> PE: Update(5)       [LC:1]
+    -> PE: Update(6)       [LC:1]
+    -> PE: Update(7)       [LC:1]
+    -> PE: Update(8)       [LC:1]
+    -> PE: Update(10)      [LC:1]
+  MAND_Q: 11(UPDATE), 14(UPDATE), 19(UPDATE), 20(UPDATE), 24(UPDATE), 25(UPDATE), 28(UPDATE), 30(UPDATE), 40(UPDATE), 51(UPDATE), 58(UPDATE), 65(UPDATE)
+--------------------------------------------------
+[LC 0001][PC 0002]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(11), Update(14), Update(19), Update(20), Update(24), Update(25), Update(28), Update(30), Update(40), Update(51)
+    -> PE: Update(11)      [LC:1]
+    -> PE: Update(14)      [LC:1]
+    -> PE: Update(19)      [LC:1]
+    -> PE: Update(20)      [LC:1]
+    -> PE: Update(24)      [LC:1]
+    -> PE: Update(25)      [LC:1]
+    -> PE: Update(28)      [LC:1]
+    -> PE: Update(30)      [LC:1]
+    -> PE: Update(40)      [LC:1]
+    -> PE: Update(51)      [LC:1]
+  MAND_Q: 58(UPDATE), 65(UPDATE)
+--------------------------------------------------
+[LC 0001][PC 0003]
+  STATE: PE:2/10 NFU:0/1
+  ISSUE: Update(58), Update(65)
+    -> PE: Update(58)      [LC:1]
+    -> PE: Update(65)      [LC:1]
+--------------------------------------------------
+[LC 0002][PC 0004]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(2->39), Edge(3->54), Edge(4->9), Edge(4->15), Edge(5->27), Edge(5->49), Edge(7->12), Edge(7->18), Edge(7->21), Edge(7->23)
+    -> PE: Edge(2->39)     [LC:8]
+    -> PE: Edge(3->54)     [LC:6]
+    -> PE: Edge(4->9)      [LC:3]
+    -> PE: Edge(4->15)     [LC:4]
+    -> PE: Edge(5->27)     [LC:3]
+    -> PE: Edge(5->49)     [LC:5]
+    -> PE: Edge(7->12)     [LC:3]
+    -> PE: Edge(7->18)     [LC:3]
+    -> PE: Edge(7->21)     [LC:4]
+    -> PE: Edge(7->23)     [LC:5]
+  MAND_Q: 26(EDGE), 16(EDGE), 13(EDGE), 22(EDGE), 52(EDGE)
+  OPT_Q (Top10): E(5->15), E(11->21), E(28->49), E(8->23), E(5->54), E(6->54), E(3->39), E(24->39), E(28->39), E(1->55)
+--------------------------------------------------
+[LC 0002][PC 0005]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(8->26), Edge(10->16), Edge(11->13), Edge(19->22), Edge(25->52), Edge(5->15), Edge(11->21), Edge(28->49), Edge(8->23), Edge(5->54)
+    -> PE: Edge(8->26)     [LC:3]
+    -> PE: Edge(10->16)    [LC:3]
+    -> PE: Edge(11->13)    [LC:3]
+    -> PE: Edge(19->22)    [LC:3]
+    -> PE: Edge(25->52)    [LC:3]
+    -> PE: Edge(5->15)     [LC:4]
+    -> PE: Edge(11->21)    [LC:4]
+    -> PE: Edge(28->49)    [LC:5]
+    -> PE: Edge(8->23)     [LC:5]
+    -> PE: Edge(5->54)     [LC:6]
+  OPT_Q (Top10): E(6->54), E(3->39), E(24->39), E(28->39), E(1->55), E(14->72), E(24->72), E(1->69), E(2->69), E(14->69)
+--------------------------------------------------
+[LC 0003][PC 0006]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(9), Update(12), Update(18), Update(27), Edge(6->54), Edge(3->39), Edge(1->55), Edge(14->72), Edge(1->69), Edge(8->50)
+    -> PE: Update(9)       [LC:3]
+    -> PE: Update(12)      [LC:3]
+    -> PE: Update(18)      [LC:3]
+    -> PE: Update(27)      [LC:3]
+    -> PE: Edge(6->54)     [LC:6]
+    -> PE: Edge(3->39)     [LC:8]
+    -> PE: Edge(1->55)     [LC:5]
+    -> PE: Edge(14->72)    [LC:7]
+    -> PE: Edge(1->69)     [LC:10]
+    -> PE: Edge(8->50)     [LC:7]
+  OPT_Q (Top10): E(24->72), E(24->39), E(28->39), E(2->69), E(14->69), E(4->31), E(1->66), E(1->68), E(19->68), E(24->68)
+--------------------------------------------------
+[LC 0004][PC 0007]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(13), Update(15), Update(16), Update(21), Update(22), Update(26), Update(52), Edge(24->72), Edge(24->39), Edge(2->69)
+    -> PE: Update(13)      [LC:3]
+    -> PE: Update(15)      [LC:4]
+    -> PE: Update(16)      [LC:3]
+    -> PE: Update(21)      [LC:4]
+    -> PE: Update(22)      [LC:3]
+    -> PE: Update(26)      [LC:3]
+    -> PE: Update(52)      [LC:3]
+    -> PE: Edge(24->72)    [LC:7]
+    -> PE: Edge(24->39)    [LC:8]
+    -> PE: Edge(2->69)     [LC:10]
+  MAND_Q: 55(EDGE), 36(EDGE), 23(EDGE), 37(EDGE), 33(EDGE)
+  OPT_Q (Top10): E(18->72), E(28->39), E(14->69), E(4->31), E(1->66), E(27->66), E(1->68), E(19->68), E(24->68), E(14->46)
+--------------------------------------------------
+[LC 0004][PC 0008]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(9->55), Edge(12->36), Edge(18->23), Edge(18->37), Edge(27->33), Edge(18->72), Edge(28->39), Edge(14->69), Edge(4->31), Edge(1->66)
+    -> PE: Edge(9->55)     [LC:5]
+    -> PE: Edge(12->36)    [LC:5]
+    -> PE: Edge(18->23)    [LC:5]
+    -> PE: Edge(18->37)    [LC:7]
+    -> PE: Edge(27->33)    [LC:6]
+    -> PE: Edge(18->72)    [LC:7]
+    -> PE: Edge(28->39)    [LC:8]
+    -> PE: Edge(14->69)    [LC:10]
+    -> PE: Edge(4->31)     [LC:8]
+    -> PE: Edge(1->66)     [LC:10]
+  OPT_Q (Top10): E(27->66), E(1->68), E(19->68), E(24->68), E(14->46), E(28->46), E(40->46), E(7->41), E(5->84), E(30->84)
+--------------------------------------------------
+[LC 0005][PC 0009]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(13->49), Edge(16->32), Edge(22->33), Edge(22->37), Edge(26->29), Edge(27->66), Edge(1->68), Edge(14->46), Edge(13->31), Edge(13->69)
+    -> PE: Edge(13->49)    [LC:5]
+    -> PE: Edge(16->32)    [LC:5]
+    -> PE: Edge(22->33)    [LC:6]
+    -> PE: Edge(22->37)    [LC:7]
+    -> PE: Edge(26->29)    [LC:5]
+    -> PE: Edge(27->66)    [LC:10]
+    -> PE: Edge(1->68)     [LC:10]
+    -> PE: Edge(14->46)    [LC:10]
+    -> PE: Edge(13->31)    [LC:8]
+    -> PE: Edge(13->69)    [LC:10]
+  MAND_Q: 83(EDGE), 17(EDGE), 54(EDGE), 39(EDGE)
+  OPT_Q (Top10): E(52->66), E(19->68), E(24->68), E(26->68), E(28->46), E(40->46), E(21->46), E(7->41), E(15->45), E(5->84)
+--------------------------------------------------
+[LC 0005][PC 0010]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(13->83), Edge(15->17), Edge(21->54), Edge(26->39), Edge(52->66), Edge(19->68), Edge(28->46), Edge(7->41), Edge(15->45), Edge(5->84)
+    -> PE: Edge(13->83)    [LC:7]
+    -> PE: Edge(15->17)    [LC:6]
+    -> PE: Edge(21->54)    [LC:6]
+    -> PE: Edge(26->39)    [LC:8]
+    -> PE: Edge(52->66)    [LC:10]
+    -> PE: Edge(19->68)    [LC:10]
+    -> PE: Edge(28->46)    [LC:10]
+    -> PE: Edge(7->41)     [LC:8]
+    -> PE: Edge(15->45)    [LC:8]
+    -> PE: Edge(5->84)     [LC:9]
+  OPT_Q (Top10): E(24->68), E(26->68), E(40->46), E(21->46), E(30->84), E(30->60), E(9->60), E(2->91), E(4->91), E(6->67)
+--------------------------------------------------
+[LC 0006][PC 0011]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(23), Update(29), Update(32), Update(33), Update(36), Update(49), Update(55), Edge(24->68), Edge(40->46), Edge(30->84)
+    -> PE: Update(23)      [LC:5]
+    -> PE: Update(29)      [LC:5]
+    -> PE: Update(32)      [LC:5]
+    -> PE: Update(33)      [LC:6]
+    -> PE: Update(36)      [LC:5]
+    -> PE: Update(49)      [LC:5]
+    -> PE: Update(55)      [LC:5]
+    -> PE: Edge(24->68)    [LC:10]
+    -> PE: Edge(40->46)    [LC:10]
+    -> PE: Edge(30->84)    [LC:9]
+  MAND_Q: 60(EDGE), 91(EDGE), 67(EDGE), 56(EDGE)
+  OPT_Q (Top10): E(9->60), E(26->68), E(21->46), E(4->91), E(11->67), E(19->67), E(24->67), E(40->56), E(2->86), E(28->86)
+--------------------------------------------------
+[LC 0006][PC 0012]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(30->60), Edge(2->91), Edge(6->67), Edge(28->56), Edge(26->68), Edge(21->46), Edge(2->86), Edge(10->75), Edge(22->53), Edge(10->79)
+    -> PE: Edge(30->60)    [LC:9]
+    -> PE: Edge(2->91)     [LC:10]
+    -> PE: Edge(6->67)     [LC:11]
+    -> PE: Edge(28->56)    [LC:11]
+    -> PE: Edge(26->68)    [LC:10]
+    -> PE: Edge(21->46)    [LC:10]
+    -> PE: Edge(2->86)     [LC:10]
+    -> PE: Edge(10->75)    [LC:10]
+    -> PE: Edge(22->53)    [LC:10]
+    -> PE: Edge(10->79)    [LC:12]
+  OPT_Q (Top10): E(9->60), E(4->91), E(11->67), E(19->67), E(24->67), E(40->56), E(28->86), E(16->75), E(20->79), E(5->89)
+--------------------------------------------------
+[LC 0007][PC 0013]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(17), Update(54), Edge(9->60), Edge(4->91), Edge(11->67), Edge(40->56), Edge(23->37), Edge(29->48), Edge(49->50), Edge(49->83)
+    -> PE: Update(17)      [LC:6]
+    -> PE: Update(54)      [LC:6]
+    -> PE: Edge(9->60)     [LC:9]
+    -> PE: Edge(4->91)     [LC:10]
+    -> PE: Edge(11->67)    [LC:11]
+    -> PE: Edge(40->56)    [LC:11]
+    -> PE: Edge(23->37)    [LC:7]
+    -> PE: Edge(29->48)    [LC:7]
+    -> PE: Edge(49->50)    [LC:7]
+    -> PE: Edge(49->83)    [LC:7]
+  MAND_Q: 72(EDGE), 86(EDGE), 75(EDGE), 79(EDGE), 34(EDGE), 35(EDGE), 38(EDGE), 41(EDGE), 42(EDGE), 45(EDGE), 69(EDGE)
+  OPT_Q (Top10): E(19->67), E(24->67), E(36->69), E(33->79), E(5->89), E(7->44), E(16->43), E(49->66), E(2->93), E(32->93)
+--------------------------------------------------
+[LC 0007][PC 0014]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(55->72), Edge(28->86), Edge(16->75), Edge(20->79), Edge(33->34), Edge(33->35), Edge(33->38), Edge(33->41), Edge(33->42), Edge(33->45)
+    -> PE: Edge(55->72)    [LC:7]
+    -> PE: Edge(28->86)    [LC:10]
+    -> PE: Edge(16->75)    [LC:10]
+    -> PE: Edge(20->79)    [LC:12]
+    -> PE: Edge(33->34)    [LC:8]
+    -> PE: Edge(33->35)    [LC:8]
+    -> PE: Edge(33->38)    [LC:8]
+    -> PE: Edge(33->41)    [LC:8]
+    -> PE: Edge(33->42)    [LC:8]
+    -> PE: Edge(33->45)    [LC:8]
+  MAND_Q: 69(EDGE)
+  OPT_Q (Top10): E(19->67), E(24->67), E(36->69), E(33->79), E(5->89), E(7->44), E(16->43), E(49->66), E(2->93), E(32->93)
+--------------------------------------------------
+[LC 0007][PC 0015]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(33->69), Edge(19->67), Edge(33->79), Edge(5->89), Edge(7->44), Edge(16->43), Edge(49->66), Edge(2->93), Edge(6->62), Edge(4->96)
+    -> PE: Edge(33->69)    [LC:10]
+    -> PE: Edge(19->67)    [LC:11]
+    -> PE: Edge(33->79)    [LC:12]
+    -> PE: Edge(5->89)     [LC:10]
+    -> PE: Edge(7->44)     [LC:10]
+    -> PE: Edge(16->43)    [LC:10]
+    -> PE: Edge(49->66)    [LC:10]
+    -> PE: Edge(2->93)     [LC:11]
+    -> PE: Edge(6->62)     [LC:11]
+    -> PE: Edge(4->96)     [LC:12]
+  OPT_Q (Top10): E(24->67), E(36->69), E(32->93), E(5->96), E(9->96), E(7->63), E(10->63), E(14->63), E(11->57), E(27->57)
+--------------------------------------------------
+[LC 0008][PC 0016]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(34), Update(35), Update(37), Update(38), Update(41), Update(42), Update(45), Update(48), Update(50), Update(72)
+    -> PE: Update(34)      [LC:8]
+    -> PE: Update(35)      [LC:8]
+    -> PE: Update(37)      [LC:7]
+    -> PE: Update(38)      [LC:8]
+    -> PE: Update(41)      [LC:8]
+    -> PE: Update(42)      [LC:8]
+    -> PE: Update(45)      [LC:8]
+    -> PE: Update(48)      [LC:7]
+    -> PE: Update(50)      [LC:7]
+    -> PE: Update(72)      [LC:7]
+  MAND_Q: 83(UPDATE), 69(EDGE), 31(EDGE), 39(EDGE), 67(EDGE), 93(EDGE), 96(EDGE), 63(EDGE), 57(EDGE), 61(EDGE), 97(EDGE)
+  OPT_Q (Top10): E(9->96), E(10->63), E(14->63), E(27->57), E(54->57), E(13->61), E(32->61), E(4->97), E(13->97), E(54->97)
+--------------------------------------------------
+[LC 0008][PC 0017]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(83), Edge(36->69), Edge(17->31), Edge(17->39), Edge(24->67), Edge(32->93), Edge(5->96), Edge(7->63), Edge(11->57), Edge(30->61)
+    -> PE: Update(83)      [LC:7]
+    -> PE: Edge(36->69)    [LC:10]
+    -> PE: Edge(17->31)    [LC:8]
+    -> PE: Edge(17->39)    [LC:8]
+    -> PE: Edge(24->67)    [LC:11]
+    -> PE: Edge(32->93)    [LC:11]
+    -> PE: Edge(5->96)     [LC:12]
+    -> PE: Edge(7->63)     [LC:12]
+    -> PE: Edge(11->57)    [LC:12]
+    -> PE: Edge(30->61)    [LC:12]
+  MAND_Q: 97(EDGE)
+  OPT_Q (Top10): E(9->96), E(10->63), E(14->63), E(27->57), E(54->57), E(13->61), E(32->61), E(4->97), E(13->97), E(54->97)
+--------------------------------------------------
+[LC 0008][PC 0018]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(2->97), Edge(9->96), Edge(10->63), Edge(27->57), Edge(13->61), Edge(0->78), Edge(2->81), Edge(14->76), Edge(18->59), Edge(36->80)
+    -> PE: Edge(2->97)     [LC:17]
+    -> PE: Edge(9->96)     [LC:12]
+    -> PE: Edge(10->63)    [LC:12]
+    -> PE: Edge(27->57)    [LC:12]
+    -> PE: Edge(13->61)    [LC:12]
+    -> PE: Edge(0->78)     [LC:14]
+    -> PE: Edge(2->81)     [LC:14]
+    -> PE: Edge(14->76)    [LC:15]
+    -> PE: Edge(18->59)    [LC:12]
+    -> PE: Edge(36->80)    [LC:13]
+  OPT_Q (Top10): E(14->63), E(54->57), E(32->61), E(4->97), E(13->97), E(54->97), E(26->78), E(4->81), E(11->81), E(19->76)
+--------------------------------------------------
+[LC 0009][PC 0019]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(31), Update(39), Edge(4->97), Edge(35->56), Edge(37->53), Edge(45->91), Edge(50->60), Edge(83->84), Edge(14->63), Edge(54->57)
+    -> PE: Update(31)      [LC:8]
+    -> PE: Update(39)      [LC:8]
+    -> PE: Edge(4->97)     [LC:17]
+    -> PE: Edge(35->56)    [LC:11]
+    -> PE: Edge(37->53)    [LC:10]
+    -> PE: Edge(45->91)    [LC:10]
+    -> PE: Edge(50->60)    [LC:9]
+    -> PE: Edge(83->84)    [LC:9]
+    -> PE: Edge(14->63)    [LC:12]
+    -> PE: Edge(54->57)    [LC:12]
+  MAND_Q: 61(EDGE), 78(EDGE), 81(EDGE), 76(EDGE), 62(EDGE), 43(EDGE), 46(EDGE), 68(EDGE), 89(EDGE), 86(EDGE), 99(EDGE), 66(EDGE), 69(EDGE)
+  OPT_Q (Top10): E(50->53), E(83->91), E(37->56), E(13->97), E(54->97), E(42->62), E(34->78), E(11->81), E(42->76), E(48->76)
+--------------------------------------------------
+[LC 0009][PC 0020]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(32->61), Edge(26->78), Edge(4->81), Edge(19->76), Edge(35->62), Edge(38->43), Edge(38->46), Edge(38->68), Edge(38->89), Edge(42->86)
+    -> PE: Edge(32->61)    [LC:12]
+    -> PE: Edge(26->78)    [LC:14]
+    -> PE: Edge(4->81)     [LC:14]
+    -> PE: Edge(19->76)    [LC:15]
+    -> PE: Edge(35->62)    [LC:11]
+    -> PE: Edge(38->43)    [LC:10]
+    -> PE: Edge(38->46)    [LC:10]
+    -> PE: Edge(38->68)    [LC:10]
+    -> PE: Edge(38->89)    [LC:10]
+    -> PE: Edge(42->86)    [LC:10]
+  MAND_Q: 99(EDGE), 66(EDGE), 69(EDGE)
+  OPT_Q (Top10): E(50->53), E(83->91), E(37->56), E(13->97), E(54->97), E(42->62), E(34->78), E(11->81), E(42->76), E(48->76)
+--------------------------------------------------
+[LC 0009][PC 0021]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(42->99), Edge(45->66), Edge(45->69), Edge(50->53), Edge(83->91), Edge(37->56), Edge(13->97), Edge(42->62), Edge(34->78), Edge(11->81)
+    -> PE: Edge(42->99)    [LC:10]
+    -> PE: Edge(45->66)    [LC:10]
+    -> PE: Edge(45->69)    [LC:10]
+    -> PE: Edge(50->53)    [LC:10]
+    -> PE: Edge(83->91)    [LC:10]
+    -> PE: Edge(37->56)    [LC:11]
+    -> PE: Edge(13->97)    [LC:17]
+    -> PE: Edge(42->62)    [LC:11]
+    -> PE: Edge(34->78)    [LC:14]
+    -> PE: Edge(11->81)    [LC:14]
+  OPT_Q (Top10): E(54->97), E(42->76), E(48->76), E(72->76), E(34->79), E(2->90), E(13->90), E(37->70), E(4->64), E(34->64)
+--------------------------------------------------
+[LC 0010][PC 0022]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(43), Update(46), Update(60), Update(68), Update(84), Update(86), Update(89), Edge(31->75), Edge(39->44), Edge(39->47)
+    -> PE: Update(43)      [LC:10]
+    -> PE: Update(46)      [LC:10]
+    -> PE: Update(60)      [LC:9]
+    -> PE: Update(68)      [LC:10]
+    -> PE: Update(84)      [LC:9]
+    -> PE: Update(86)      [LC:10]
+    -> PE: Update(89)      [LC:10]
+    -> PE: Edge(31->75)    [LC:10]
+    -> PE: Edge(39->44)    [LC:10]
+    -> PE: Edge(39->47)    [LC:10]
+  MAND_Q: 56(EDGE), 97(EDGE), 79(EDGE), 90(EDGE), 70(EDGE)
+  OPT_Q (Top10): E(13->90), E(4->64), E(34->64), E(20->82), E(13->82), E(42->76), E(48->76), E(72->76), E(7->77), E(18->77)
+--------------------------------------------------
+[LC 0010][PC 0023]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(39->56), Edge(54->97), Edge(34->79), Edge(2->90), Edge(37->70), Edge(4->64), Edge(20->82), Edge(42->76), Edge(7->77), Edge(16->74)
+    -> PE: Edge(39->56)    [LC:11]
+    -> PE: Edge(54->97)    [LC:17]
+    -> PE: Edge(34->79)    [LC:12]
+    -> PE: Edge(2->90)     [LC:14]
+    -> PE: Edge(37->70)    [LC:14]
+    -> PE: Edge(4->64)     [LC:14]
+    -> PE: Edge(20->82)    [LC:14]
+    -> PE: Edge(42->76)    [LC:15]
+    -> PE: Edge(7->77)     [LC:16]
+    -> PE: Edge(16->74)    [LC:16]
+  OPT_Q (Top10): E(13->90), E(34->64), E(13->82), E(48->76), E(72->76), E(18->77), E(17->74), E(34->74), E(72->74), E(23->87)
+--------------------------------------------------
+[LC 0011][PC 0024]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(44), Update(47), Update(53), Update(62), Update(66), Update(69), Update(75), Update(91), Update(99), Edge(13->90)
+    -> PE: Update(44)      [LC:10]
+    -> PE: Update(47)      [LC:10]
+    -> PE: Update(53)      [LC:10]
+    -> PE: Update(62)      [LC:11]
+    -> PE: Update(66)      [LC:10]
+    -> PE: Update(69)      [LC:10]
+    -> PE: Update(75)      [LC:10]
+    -> PE: Update(91)      [LC:10]
+    -> PE: Update(99)      [LC:10]
+    -> PE: Edge(13->90)    [LC:14]
+  MAND_Q: 79(EDGE), 67(EDGE), 93(EDGE), 64(EDGE), 82(EDGE), 76(EDGE), 77(EDGE), 74(EDGE), 57(EDGE), 59(EDGE), 63(EDGE), 97(EDGE)
+  OPT_Q (Top10): E(72->76), E(60->77), E(34->74), E(72->74), E(84->97), E(46->81), E(23->87), E(54->87), E(28->94), E(16->94)
+--------------------------------------------------
+[LC 0011][PC 0025]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(43->79), Edge(60->67), Edge(84->93), Edge(34->64), Edge(13->82), Edge(48->76), Edge(18->77), Edge(17->74), Edge(43->57), Edge(46->59)
+    -> PE: Edge(43->79)    [LC:12]
+    -> PE: Edge(60->67)    [LC:11]
+    -> PE: Edge(84->93)    [LC:11]
+    -> PE: Edge(34->64)    [LC:14]
+    -> PE: Edge(13->82)    [LC:14]
+    -> PE: Edge(48->76)    [LC:15]
+    -> PE: Edge(18->77)    [LC:16]
+    -> PE: Edge(17->74)    [LC:16]
+    -> PE: Edge(43->57)    [LC:12]
+    -> PE: Edge(46->59)    [LC:12]
+  MAND_Q: 63(EDGE), 97(EDGE)
+  OPT_Q (Top10): E(72->76), E(60->77), E(34->74), E(72->74), E(84->97), E(46->81), E(23->87), E(54->87), E(28->94), E(16->94)
+--------------------------------------------------
+[LC 0011][PC 0026]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(46->63), Edge(68->97), Edge(72->76), Edge(60->77), Edge(34->74), Edge(46->81), Edge(23->87), Edge(28->94), Edge(26->92), Edge(33->95)
+    -> PE: Edge(46->63)    [LC:12]
+    -> PE: Edge(68->97)    [LC:17]
+    -> PE: Edge(72->76)    [LC:15]
+    -> PE: Edge(60->77)    [LC:16]
+    -> PE: Edge(34->74)    [LC:16]
+    -> PE: Edge(46->81)    [LC:14]
+    -> PE: Edge(23->87)    [LC:16]
+    -> PE: Edge(28->94)    [LC:18]
+    -> PE: Edge(26->92)    [LC:16]
+    -> PE: Edge(33->95)    [LC:16]
+  OPT_Q (Top10): E(72->74), E(84->97), E(54->87), E(16->94), E(26->94), E(60->94), E(89->92), E(4->88), E(18->88), E(49->88)
+--------------------------------------------------
+[LC 0012][PC 0027]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(56), Update(57), Update(59), Update(67), Update(79), Update(93), Edge(44->61), Edge(47->70), Edge(53->80), Edge(66->96)
+    -> PE: Update(56)      [LC:11]
+    -> PE: Update(57)      [LC:12]
+    -> PE: Update(59)      [LC:12]
+    -> PE: Update(67)      [LC:11]
+    -> PE: Update(79)      [LC:12]
+    -> PE: Update(93)      [LC:11]
+    -> PE: Edge(44->61)    [LC:12]
+    -> PE: Edge(47->70)    [LC:14]
+    -> PE: Edge(53->80)    [LC:13]
+    -> PE: Edge(66->96)    [LC:12]
+  MAND_Q: 97(EDGE), 87(EDGE), 94(EDGE), 78(EDGE), 71(EDGE)
+  OPT_Q (Top10): E(75->80), E(69->70), E(47->87), E(47->97), E(26->94), E(60->94), E(72->74), E(89->92), E(53->77), E(75->95)
+--------------------------------------------------
+[LC 0012][PC 0028]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Edge(84->97), Edge(54->87), Edge(16->94), Edge(53->78), Edge(62->71), Edge(75->80), Edge(69->70), Edge(72->74), Edge(89->92), Edge(53->77)
+    -> PE: Edge(84->97)    [LC:17]
+    -> PE: Edge(54->87)    [LC:16]
+    -> PE: Edge(16->94)    [LC:18]
+    -> PE: Edge(53->78)    [LC:14]
+    -> PE: Edge(62->71)    [LC:13]
+    -> PE: Edge(75->80)    [LC:13]
+    -> PE: Edge(69->70)    [LC:14]
+    -> PE: Edge(72->74)    [LC:16]
+    -> PE: Edge(89->92)    [LC:16]
+    -> PE: Edge(53->77)    [LC:16]
+  OPT_Q (Top10): E(47->87), E(47->97), E(26->94), E(60->94), E(75->95), E(4->88), E(18->88), E(49->88), E(9->73), E(8->85)
+--------------------------------------------------
+[LC 0013][PC 0029]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(61), Update(63), Update(96), Edge(56->90), Edge(47->87), Edge(47->97), Edge(26->94), Edge(4->88), Edge(57->82), Edge(59->81)
+    -> PE: Update(61)      [LC:12]
+    -> PE: Update(63)      [LC:12]
+    -> PE: Update(96)      [LC:12]
+    -> PE: Edge(56->90)    [LC:14]
+    -> PE: Edge(47->87)    [LC:16]
+    -> PE: Edge(47->97)    [LC:17]
+    -> PE: Edge(26->94)    [LC:18]
+    -> PE: Edge(4->88)     [LC:17]
+    -> PE: Edge(57->82)    [LC:14]
+    -> PE: Edge(59->81)    [LC:14]
+  OPT_Q (Top10): E(59->90), E(18->88), E(49->88), E(60->94), E(67->94), E(75->95), E(9->73), E(8->85), E(65->85), E(66->85)
+--------------------------------------------------
+[LC 0014][PC 0030]
+  STATE: PE:10/10 NFU:0/1
+  ISSUE: Update(71), Update(80), Edge(59->90), Edge(18->88), Edge(61->64), Edge(63->70), Edge(63->78), Edge(60->94), Edge(75->95), Edge(9->73)
+    -> PE: Update(71)      [LC:13]
+    -> PE: Update(80)      [LC:13]
+    -> PE: Edge(59->90)    [LC:14]
+    -> PE: Edge(18->88)    [LC:17]
+    -> PE: Edge(61->64)    [LC:14]
+    -> PE: Edge(63->70)    [LC:14]
+    -> PE: Edge(63->78)    [LC:14]
+    -> PE: Edge(60->94)    [LC:18]
+    -> PE: Edge(75->95)    [LC:16]
+    -> PE: Edge(9->73)     [LC:16]
+  MAND_Q: 85(EDGE), 98(EDGE)
+  OPT_Q (Top10): E(49->88), E(67->94), E(65->85), E(66->85), E(31->98)
+--------------------------------------------------
+[LC 0014][PC 0031]
+  STATE: PE:4/10 NFU:0/1
+  ISSUE: Edge(8->85), Edge(51->98), Edge(49->88), Edge(67->94)
+    -> PE: Edge(8->85)     [LC:18]
+    -> PE: Edge(51->98)    [LC:19]
+    -> PE: Edge(49->88)    [LC:17]
+    -> PE: Edge(67->94)    [LC:18]
+  OPT_Q (Top10): E(65->85), E(66->85), E(31->98)
+--------------------------------------------------
+[LC 0015][PC 0032]
+  STATE: PE:9/10 NFU:0/1
+  ISSUE: Update(64), Update(70), Update(78), Update(81), Update(82), Update(90), Edge(65->85), Edge(31->98), Edge(71->76)
+    -> PE: Update(64)      [LC:14]
+    -> PE: Update(70)      [LC:14]
+    -> PE: Update(78)      [LC:14]
+    -> PE: Update(81)      [LC:14]
+    -> PE: Update(82)      [LC:14]
+    -> PE: Update(90)      [LC:14]
+    -> PE: Edge(65->85)    [LC:18]
+    -> PE: Edge(31->98)    [LC:19]
+    -> PE: Edge(71->76)    [LC:15]
+  OPT_Q (Top10): E(66->85)
+--------------------------------------------------
+[LC 0016][PC 0033]
+  STATE: PE:8/10 NFU:0/1
+  ISSUE: Edge(66->85), Edge(64->73), Edge(64->77), Edge(64->87), Edge(64->97), Edge(70->74), Edge(70->92), Edge(90->95)
+    -> PE: Edge(66->85)    [LC:18]
+    -> PE: Edge(64->73)    [LC:16]
+    -> PE: Edge(64->77)    [LC:16]
+    -> PE: Edge(64->87)    [LC:16]
+    -> PE: Edge(64->97)    [LC:17]
+    -> PE: Edge(70->74)    [LC:16]
+    -> PE: Edge(70->92)    [LC:16]
+    -> PE: Edge(90->95)    [LC:16]
+  OPT_Q (Top10): E(82->97)
+--------------------------------------------------
+[LC 0017][PC 0034]
+  STATE: PE:2/10 NFU:0/1
+  ISSUE: Update(76), Edge(82->97)
+    -> PE: Update(76)      [LC:15]
+    -> PE: Edge(82->97)    [LC:17]
+--------------------------------------------------
+[LC 0018][PC 0035]
+  STATE: PE:8/10 NFU:0/1
+  ISSUE: Update(73), Update(74), Update(77), Update(87), Update(92), Update(95), Edge(76->88), Edge(76->98)
+    -> PE: Update(73)      [LC:16]
+    -> PE: Update(74)      [LC:16]
+    -> PE: Update(77)      [LC:16]
+    -> PE: Update(87)      [LC:16]
+    -> PE: Update(92)      [LC:16]
+    -> PE: Update(95)      [LC:16]
+    -> PE: Edge(76->88)    [LC:17]
+    -> PE: Edge(76->98)    [LC:19]
+--------------------------------------------------
+[LC 0019][PC 0036]
+  STATE: PE:4/10 NFU:0/1
+  ISSUE: Update(97), Edge(92->98), Edge(77->85), Edge(87->94)
+    -> PE: Update(97)      [LC:17]
+    -> PE: Edge(92->98)    [LC:19]
+    -> PE: Edge(77->85)    [LC:18]
+    -> PE: Edge(87->94)    [LC:18]
+--------------------------------------------------
+[LC 0020][PC 0037]
+  STATE: PE:1/10 NFU:0/1
+  ISSUE: Update(88)
+    -> PE: Update(88)      [LC:17]
+--------------------------------------------------
+[LC 0021][PC 0038]
+  STATE: PE:3/10 NFU:0/1
+  ISSUE: Update(85), Update(94), Edge(88->98)
+    -> PE: Update(85)      [LC:18]
+    -> PE: Update(94)      [LC:18]
+    -> PE: Edge(88->98)    [LC:19]
+--------------------------------------------------
+[LC 0022][PC 0039]
+  STATE: PE:0/10 NFU:0/1
+--------------------------------------------------
+[LC 0023][PC 0040]
+  STATE: PE:1/10 NFU:0/1
+  ISSUE: Update(98)
+    -> PE: Update(98)      [LC:19]
+--------------------------------------------------
+[LC 0024][PC 0041]
+  STATE: PE:0/10 NFU:0/1
+--------------------------------------------------

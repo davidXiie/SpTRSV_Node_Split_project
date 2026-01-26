@@ -1,0 +1,64 @@
+Resource-Aware MEC Report: synthetic_100_20sp_dag
+Max MEC: 71
+--------------------------------------------------------------------------------
+Format: LC [Time] (Count): Node_ID_List
+--------------------------------------------------------------------------------
+LC 0001 (6 nodes): 0, 1, 2, 3, 4, 6
+LC 0003 (1 nodes): 8
+LC 0004 (2 nodes): 21, 5
+LC 0005 (1 nodes): 9
+LC 0006 (1 nodes): 7
+LC 0008 (3 nodes): 10, 11, 13
+LC 0010 (3 nodes): 12, 16, P_78_0
+LC 0012 (2 nodes): 14, 18
+LC 0013 (1 nodes): 20
+LC 0014 (3 nodes): 15, 33, P_94_0
+LC 0015 (1 nodes): 19
+LC 0016 (1 nodes): 17
+LC 0017 (3 nodes): 22, 25, 31
+LC 0018 (3 nodes): 23, 24, P_75_0
+LC 0019 (2 nodes): 30, P_88_0
+LC 0020 (3 nodes): 26, 28, P_95_0
+LC 0021 (3 nodes): 32, P_78_1, P_97_0
+LC 0022 (3 nodes): 27, 29, 42
+LC 0023 (1 nodes): P_96_0
+LC 0024 (3 nodes): 34, 35, 47
+LC 0025 (1 nodes): 43
+LC 0026 (2 nodes): 36, 39
+LC 0028 (2 nodes): 37, 38
+LC 0029 (2 nodes): P_88_1, P_99_0
+LC 0030 (3 nodes): 40, 41, 48
+LC 0031 (1 nodes): P_96_1
+LC 0032 (1 nodes): 44
+LC 0034 (4 nodes): 45, 46, 50, 67
+LC 0035 (2 nodes): P_75_1, P_78_2
+LC 0036 (5 nodes): 49, 51, 53, 54, P_94_1
+LC 0038 (1 nodes): 52
+LC 0039 (1 nodes): 60
+LC 0040 (2 nodes): 55, 56
+LC 0041 (1 nodes): P_88_2
+LC 0042 (5 nodes): 57, 58, 63, 68, P_99_1
+LC 0043 (1 nodes): P_97_1
+LC 0044 (3 nodes): 59, 61, 73
+LC 0045 (2 nodes): P_75_2, P_95_1
+LC 0046 (2 nodes): 62, 65
+LC 0048 (3 nodes): 64, 66, P_78_3
+LC 0049 (1 nodes): P_94_2
+LC 0050 (3 nodes): 69, 70, 78
+LC 0052 (1 nodes): 71
+LC 0053 (1 nodes): P_75_3
+LC 0054 (1 nodes): 72
+LC 0055 (1 nodes): 75
+LC 0056 (5 nodes): 74, 76, 80, 89, P_97_2
+LC 0057 (3 nodes): 79, 82, P_96_2
+LC 0058 (6 nodes): 77, 81, 85, 87, P_88_3, P_99_2
+LC 0060 (6 nodes): 83, 86, 88, 90, 92, 98
+LC 0062 (1 nodes): 84
+LC 0063 (3 nodes): P_94_3, P_95_2, P_96_3
+LC 0064 (1 nodes): 91
+LC 0065 (1 nodes): 94
+LC 0066 (2 nodes): 93, 96
+LC 0067 (3 nodes): P_95_3, P_97_3, P_99_3
+LC 0069 (1 nodes): 97
+LC 0070 (1 nodes): 95
+LC 0071 (1 nodes): 99
