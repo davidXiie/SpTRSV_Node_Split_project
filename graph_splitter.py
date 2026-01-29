@@ -99,7 +99,7 @@ if __name__ == "__main__":
     INPUT_DIR = os.path.join(BASE_DIR, "SpTRSV_Node_Split_project", "input_data")
     OUTPUT_DIR = os.path.join(BASE_DIR, "SpTRSV_Node_Split_project", "input_data_split")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    
+
     # 这里设置阈值和块大小都为 5
     rewriter = GraphRewriter(threshold=5, chunk_size=5)
     

@@ -1,113 +1,103 @@
-import json
 import os
-import math
-import glob
+import json
+import random
+import matplotlib.pyplot as plt
+import numpy as np
 
-class GraphRewriter:
-    def __init__(self, threshold=20, split_factor=4):
-        self.threshold = threshold
-        self.split_factor = split_factor # 必须是 4，对应 NFU 输入
+## 生成 Long-Tail 矩阵的 DAG
 
-    def process_file(self, input_path, output_dir):
-        with open(input_path, 'r') as f:
-            raw_dag = json.load(f)
-            
-        new_dag = []
-        total_split_count = 0
+class LongTailDAGGenerator:
+    def __init__(self, output_dir):
+        self.output_dir = output_dir
+        os.makedirs(self.output_dir, exist_ok=True)
+
+    def generate(self, dim=100, super_node_ratio=0.10, visualize=True):
+        print(f"Generating Long-Tail Matrix: Dim={dim}, SuperNode Ratio={super_node_ratio:.0%}")
         
-        for node in raw_dag:
-            # [简化] 直接读取统一格式 id 和 parents
-            # 如果你的生成器还没更新，这里会报错，但既然你觉得冗余，说明数据源已统一
-            nid = node['id']
-            parents = node['parents']
-            level = node.get('level', 0)
-            
-            # --- 判定逻辑 ---
-            if len(parents) <= self.threshold:
-                # [Case A] 普通节点 -> NORMAL
-                new_dag.append({
-                    "id": str(nid), # 统一转字符串 ID
-                    "type": "NORMAL",
-                    "parents": [str(p) for p in parents],
-                    "level": level,
-                    "cost": len(parents) + 1 # Update cost
-                })
+        adjacency = {i: [] for i in range(dim)}
+        levels = {i: 0 for i in range(dim)}
+        viz_rows, viz_cols = [], [] # For visualization
+        
+        # 定义超级行的索引 (随机选择)
+        num_super = int(dim * super_node_ratio)
+        # 避开前 10 行，因为前面节点太少，没法做超级节点
+        possible_indices = list(range(10, dim))
+        super_indices = set(random.sample(possible_indices, min(num_super, len(possible_indices))))
+        
+        total_edges = 0
+        
+        for i in range(dim):
+            # A. 确定当前节点的入度目标
+            if i in super_indices:
+                # 超级节点：入度 20 ~ 40 (确保触发拆分阈值 20)
+                target_degree = random.randint(20, 40)
             else:
-                # [Case B] 超级节点 -> 拆分
-                total_split_count += 1
+                # 普通节点：入度 0 ~ 10 (稀疏)
+                target_degree = random.randint(0, 10)
+            
+            # 修正：不能超过目前已有的节点数 (i)
+            target_degree = min(target_degree, i)
+            
+            # B. 随机选择父节点
+            if target_degree > 0:
+                parents = random.sample(range(i), target_degree)
+                parents.sort()
+                adjacency[i] = parents
+                total_edges += len(parents)
                 
-                # 1. 拆分父节点列表
-                num_parents = len(parents)
-                chunk_size = math.ceil(num_parents / self.split_factor)
-                
-                partial_node_ids = []
-                
-                for k in range(self.split_factor):
-                    # 切片
-                    start = k * chunk_size
-                    end = min((k + 1) * chunk_size, num_parents)
-                    chunk_parents = parents[start:end]
-                    
-                    if not chunk_parents:
-                        continue 
-                        
-                    # 创建 Partial Node
-                    p_id = f"P_{nid}_{k}"
-                    partial_node_ids.append(p_id)
-                    
-                    new_dag.append({
-                        "id": p_id,
-                        "type": "PARTIAL",
-                        "parents": [str(p) for p in chunk_parents],
-                        "level": level, 
-                        "cost": len(chunk_parents) 
-                    })
-                
-                # 2. 创建 Fusion Node (复用原 ID)
-                new_dag.append({
-                    "id": str(nid),
-                    "type": "FUSION",
-                    "parents": partial_node_ids, 
-                    "level": level + 1,
-                    "cost": 2 
-                })
+                # 计算 Level
+                max_p_level = -1
+                for p in parents:
+                    if levels[p] > max_p_level: max_p_level = levels[p]
+                    # 记录可视化坐标
+                    viz_rows.append(i)
+                    viz_cols.append(p)
+                levels[i] = max_p_level + 1
+            else:
+                levels[i] = 0
+            
+            # 对角线可视化
+            viz_rows.append(i)
+            viz_cols.append(i)
 
-        # 保存
-        fname = os.path.basename(input_path).replace(".json", "")
-        # 防止重复添加后缀 (如果文件名本来就是 xxx_dag.json)
-        if fname.endswith("_dag"): 
-            base_name = fname 
-        else: 
-            base_name = fname + "_dag"
+        # C. 导出 JSON
+        dag_list = []
+        for i in range(dim):
+            dag_list.append({
+                "id": i,
+                "parents": adjacency[i],
+                "level": levels[i],
+                # 预先标记，方便 debug，实际上由 Rewriter 决定类型
+                "is_super": i in super_indices 
+            })
             
-        out_name = f"{base_name}_split.json"
-        out_path = os.path.join(output_dir, out_name)
+        filename = f"longtail_{dim}_{int(super_node_ratio*100)}pct"
+        save_path = os.path.join(self.output_dir, f"{filename}_dag.json")
+        with open(save_path, 'w') as f:
+            json.dump(dag_list, f, indent=4)
+            
+        print(f"  -> Generated {total_edges} edges. Saved to {save_path}")
         
-        with open(out_path, 'w') as f:
-            json.dump(new_dag, f, indent=4)
+        if visualize:
+            self._save_spy_plot(filename, dim, viz_rows, viz_cols)
             
-        print(f"Rewriter Report for {fname}:")
-        print(f"  -> Threshold: {self.threshold}")
-        print(f"  -> Split Nodes: {total_split_count}")
-        print(f"  -> Saved to: {out_path}")
-        return out_path
+        return save_path
+
+    def _save_spy_plot(self, name, dim, rows, cols):
+        plt.figure(figsize=(6, 6))
+        plt.scatter(cols, rows, c='blue', s=1, marker='s')
+        plt.xlim(-1, dim)
+        plt.ylim(-1, dim)
+        plt.gca().invert_yaxis()
+        plt.title(f"Sparsity: {name}")
+        plt.savefig(os.path.join(self.output_dir, f"{name}_spy.png"), dpi=150)
+        plt.close()
 
 if __name__ == "__main__":
+    # 生成目录
     BASE_DIR = os.getcwd()
     INPUT_DIR = os.path.join(BASE_DIR, "SpTRSV_Node_Split_project", "input_data")
-    OUTPUT_DIR = os.path.join(BASE_DIR, "SpTRSV_Node_Split_project", "input_data_split")
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
     
-    rewriter = GraphRewriter(threshold=20)
-    
-    # [修改] 扫描目录下所有 _dag.json 文件 (不再限制 longtail)
-    files = glob.glob(os.path.join(INPUT_DIR, "*_dag.json"))
-    
-    if not files:
-        print(f"No DAG files found in {INPUT_DIR}")
-    else:
-        print(f"Found {len(files)} DAG files to process.")
-        for f in files:
-            # 排除掉可能误读的 split 文件 (虽然 glob pattern *_dag.json 应该能避开 *_split.json)
-            if "split" in f: continue
-            rewriter.process_file(f, OUTPUT_DIR)
+    gen = LongTailDAGGenerator(INPUT_DIR)
+    # 生成一个 100x100，含 10% 超级节点的矩阵
+    gen.generate(dim=100, super_node_ratio=0.10)
