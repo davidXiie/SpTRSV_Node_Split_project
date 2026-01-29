@@ -264,18 +264,36 @@
         "cost": 2
     },
     {
-        "id": "30",
-        "type": "NORMAL",
+        "id": "P_30_0",
+        "type": "PARTIAL",
         "parents": [
             "2",
             "13",
             "18",
             "20",
-            "21",
+            "21"
+        ],
+        "level": 4,
+        "cost": 5
+    },
+    {
+        "id": "P_30_1",
+        "type": "PARTIAL",
+        "parents": [
             "25"
         ],
         "level": 4,
-        "cost": 7
+        "cost": 1
+    },
+    {
+        "id": "30",
+        "type": "FUSION",
+        "parents": [
+            "P_30_0",
+            "P_30_1"
+        ],
+        "level": 5,
+        "cost": 2
     },
     {
         "id": "31",
@@ -374,34 +392,70 @@
         "cost": 3
     },
     {
-        "id": "40",
-        "type": "NORMAL",
+        "id": "P_40_0",
+        "type": "PARTIAL",
         "parents": [
             "1",
             "6",
             "10",
             "11",
-            "16",
+            "16"
+        ],
+        "level": 6,
+        "cost": 5
+    },
+    {
+        "id": "P_40_1",
+        "type": "PARTIAL",
+        "parents": [
             "25",
             "37"
         ],
         "level": 6,
-        "cost": 8
+        "cost": 2
     },
     {
-        "id": "41",
-        "type": "NORMAL",
+        "id": "40",
+        "type": "FUSION",
+        "parents": [
+            "P_40_0",
+            "P_40_1"
+        ],
+        "level": 7,
+        "cost": 2
+    },
+    {
+        "id": "P_41_0",
+        "type": "PARTIAL",
         "parents": [
             "2",
             "7",
             "14",
             "26",
-            "29",
+            "29"
+        ],
+        "level": 6,
+        "cost": 5
+    },
+    {
+        "id": "P_41_1",
+        "type": "PARTIAL",
+        "parents": [
             "30",
             "39"
         ],
         "level": 6,
-        "cost": 8
+        "cost": 2
+    },
+    {
+        "id": "41",
+        "type": "FUSION",
+        "parents": [
+            "P_41_0",
+            "P_41_1"
+        ],
+        "level": 7,
+        "cost": 2
     },
     {
         "id": "42",
@@ -415,48 +469,102 @@
         "cost": 4
     },
     {
-        "id": "43",
-        "type": "NORMAL",
+        "id": "P_43_0",
+        "type": "PARTIAL",
         "parents": [
             "6",
             "11",
             "16",
             "18",
-            "26",
+            "26"
+        ],
+        "level": 4,
+        "cost": 5
+    },
+    {
+        "id": "P_43_1",
+        "type": "PARTIAL",
+        "parents": [
             "36",
             "42"
         ],
         "level": 4,
-        "cost": 8
+        "cost": 2
     },
     {
-        "id": "44",
-        "type": "NORMAL",
+        "id": "43",
+        "type": "FUSION",
+        "parents": [
+            "P_43_0",
+            "P_43_1"
+        ],
+        "level": 5,
+        "cost": 2
+    },
+    {
+        "id": "P_44_0",
+        "type": "PARTIAL",
         "parents": [
             "4",
             "5",
             "18",
             "19",
-            "25",
+            "25"
+        ],
+        "level": 4,
+        "cost": 5
+    },
+    {
+        "id": "P_44_1",
+        "type": "PARTIAL",
+        "parents": [
             "33",
             "34"
         ],
         "level": 4,
-        "cost": 8
+        "cost": 2
     },
     {
-        "id": "45",
-        "type": "NORMAL",
+        "id": "44",
+        "type": "FUSION",
+        "parents": [
+            "P_44_0",
+            "P_44_1"
+        ],
+        "level": 5,
+        "cost": 2
+    },
+    {
+        "id": "P_45_0",
+        "type": "PARTIAL",
         "parents": [
             "0",
             "5",
             "14",
             "25",
-            "30",
+            "30"
+        ],
+        "level": 6,
+        "cost": 5
+    },
+    {
+        "id": "P_45_1",
+        "type": "PARTIAL",
+        "parents": [
             "39"
         ],
         "level": 6,
-        "cost": 7
+        "cost": 1
+    },
+    {
+        "id": "45",
+        "type": "FUSION",
+        "parents": [
+            "P_45_0",
+            "P_45_1"
+        ],
+        "level": 7,
+        "cost": 2
     },
     {
         "id": "46",
@@ -472,19 +580,37 @@
         "cost": 6
     },
     {
-        "id": "47",
-        "type": "NORMAL",
+        "id": "P_47_0",
+        "type": "PARTIAL",
         "parents": [
             "5",
             "6",
             "8",
             "11",
-            "20",
+            "20"
+        ],
+        "level": 3,
+        "cost": 5
+    },
+    {
+        "id": "P_47_1",
+        "type": "PARTIAL",
+        "parents": [
             "22",
             "34"
         ],
         "level": 3,
-        "cost": 8
+        "cost": 2
+    },
+    {
+        "id": "47",
+        "type": "FUSION",
+        "parents": [
+            "P_47_0",
+            "P_47_1"
+        ],
+        "level": 4,
+        "cost": 2
     },
     {
         "id": "48",
@@ -499,20 +625,38 @@
         "cost": 5
     },
     {
-        "id": "49",
-        "type": "NORMAL",
+        "id": "P_49_0",
+        "type": "PARTIAL",
         "parents": [
             "15",
             "17",
             "21",
             "27",
-            "28",
+            "28"
+        ],
+        "level": 7,
+        "cost": 5
+    },
+    {
+        "id": "P_49_1",
+        "type": "PARTIAL",
+        "parents": [
             "40",
             "42",
             "45"
         ],
         "level": 7,
-        "cost": 9
+        "cost": 3
+    },
+    {
+        "id": "49",
+        "type": "FUSION",
+        "parents": [
+            "P_49_0",
+            "P_49_1"
+        ],
+        "level": 8,
+        "cost": 2
     },
     {
         "id": "50",
@@ -561,51 +705,105 @@
         "cost": 4
     },
     {
-        "id": "54",
-        "type": "NORMAL",
+        "id": "P_54_0",
+        "type": "PARTIAL",
         "parents": [
             "10",
             "15",
             "26",
             "27",
-            "34",
+            "34"
+        ],
+        "level": 4,
+        "cost": 5
+    },
+    {
+        "id": "P_54_1",
+        "type": "PARTIAL",
+        "parents": [
             "36"
         ],
         "level": 4,
-        "cost": 7
+        "cost": 1
     },
     {
-        "id": "55",
-        "type": "NORMAL",
+        "id": "54",
+        "type": "FUSION",
+        "parents": [
+            "P_54_0",
+            "P_54_1"
+        ],
+        "level": 5,
+        "cost": 2
+    },
+    {
+        "id": "P_55_0",
+        "type": "PARTIAL",
         "parents": [
             "0",
             "5",
             "16",
             "24",
-            "33",
+            "33"
+        ],
+        "level": 7,
+        "cost": 5
+    },
+    {
+        "id": "P_55_1",
+        "type": "PARTIAL",
+        "parents": [
             "36",
             "40",
             "41"
         ],
         "level": 7,
-        "cost": 9
+        "cost": 3
     },
     {
-        "id": "56",
-        "type": "NORMAL",
+        "id": "55",
+        "type": "FUSION",
+        "parents": [
+            "P_55_0",
+            "P_55_1"
+        ],
+        "level": 8,
+        "cost": 2
+    },
+    {
+        "id": "P_56_0",
+        "type": "PARTIAL",
         "parents": [
             "5",
             "8",
             "11",
             "12",
-            "23",
+            "23"
+        ],
+        "level": 8,
+        "cost": 5
+    },
+    {
+        "id": "P_56_1",
+        "type": "PARTIAL",
+        "parents": [
             "24",
             "34",
             "41",
             "51"
         ],
         "level": 8,
-        "cost": 10
+        "cost": 4
+    },
+    {
+        "id": "56",
+        "type": "FUSION",
+        "parents": [
+            "P_56_0",
+            "P_56_1"
+        ],
+        "level": 9,
+        "cost": 2
     },
     {
         "id": "57",
@@ -633,33 +831,69 @@
         "cost": 6
     },
     {
-        "id": "59",
-        "type": "NORMAL",
+        "id": "P_59_0",
+        "type": "PARTIAL",
         "parents": [
             "6",
             "25",
             "29",
             "30",
-            "32",
+            "32"
+        ],
+        "level": 7,
+        "cost": 5
+    },
+    {
+        "id": "P_59_1",
+        "type": "PARTIAL",
+        "parents": [
             "40"
         ],
         "level": 7,
-        "cost": 7
+        "cost": 1
     },
     {
-        "id": "60",
-        "type": "NORMAL",
+        "id": "59",
+        "type": "FUSION",
+        "parents": [
+            "P_59_0",
+            "P_59_1"
+        ],
+        "level": 8,
+        "cost": 2
+    },
+    {
+        "id": "P_60_0",
+        "type": "PARTIAL",
         "parents": [
             "11",
             "12",
             "15",
             "17",
-            "22",
+            "22"
+        ],
+        "level": 9,
+        "cost": 5
+    },
+    {
+        "id": "P_60_1",
+        "type": "PARTIAL",
+        "parents": [
             "28",
             "56"
         ],
         "level": 9,
-        "cost": 8
+        "cost": 2
+    },
+    {
+        "id": "60",
+        "type": "FUSION",
+        "parents": [
+            "P_60_0",
+            "P_60_1"
+        ],
+        "level": 10,
+        "cost": 2
     },
     {
         "id": "61",
@@ -675,18 +909,36 @@
         "cost": 6
     },
     {
-        "id": "62",
-        "type": "NORMAL",
+        "id": "P_62_0",
+        "type": "PARTIAL",
         "parents": [
             "16",
             "25",
             "29",
             "46",
-            "55",
+            "55"
+        ],
+        "level": 8,
+        "cost": 5
+    },
+    {
+        "id": "P_62_1",
+        "type": "PARTIAL",
+        "parents": [
             "58"
         ],
         "level": 8,
-        "cost": 7
+        "cost": 1
+    },
+    {
+        "id": "62",
+        "type": "FUSION",
+        "parents": [
+            "P_62_0",
+            "P_62_1"
+        ],
+        "level": 9,
+        "cost": 2
     },
     {
         "id": "63",
@@ -702,48 +954,102 @@
         "cost": 6
     },
     {
-        "id": "64",
-        "type": "NORMAL",
+        "id": "P_64_0",
+        "type": "PARTIAL",
         "parents": [
             "3",
             "13",
             "20",
             "29",
-            "32",
+            "32"
+        ],
+        "level": 7,
+        "cost": 5
+    },
+    {
+        "id": "P_64_1",
+        "type": "PARTIAL",
+        "parents": [
             "40"
         ],
         "level": 7,
-        "cost": 7
+        "cost": 1
     },
     {
-        "id": "65",
-        "type": "NORMAL",
+        "id": "64",
+        "type": "FUSION",
+        "parents": [
+            "P_64_0",
+            "P_64_1"
+        ],
+        "level": 8,
+        "cost": 2
+    },
+    {
+        "id": "P_65_0",
+        "type": "PARTIAL",
         "parents": [
             "5",
             "45",
             "52",
             "53",
-            "59",
+            "59"
+        ],
+        "level": 10,
+        "cost": 5
+    },
+    {
+        "id": "P_65_1",
+        "type": "PARTIAL",
+        "parents": [
             "60",
             "62",
             "64"
         ],
         "level": 10,
-        "cost": 9
+        "cost": 3
     },
     {
-        "id": "66",
-        "type": "NORMAL",
+        "id": "65",
+        "type": "FUSION",
+        "parents": [
+            "P_65_0",
+            "P_65_1"
+        ],
+        "level": 11,
+        "cost": 2
+    },
+    {
+        "id": "P_66_0",
+        "type": "PARTIAL",
         "parents": [
             "22",
             "26",
             "36",
             "39",
-            "43",
+            "43"
+        ],
+        "level": 9,
+        "cost": 5
+    },
+    {
+        "id": "P_66_1",
+        "type": "PARTIAL",
+        "parents": [
             "56"
         ],
         "level": 9,
-        "cost": 7
+        "cost": 1
+    },
+    {
+        "id": "66",
+        "type": "FUSION",
+        "parents": [
+            "P_66_0",
+            "P_66_1"
+        ],
+        "level": 10,
+        "cost": 2
     },
     {
         "id": "67",
@@ -757,19 +1063,37 @@
         "cost": 4
     },
     {
-        "id": "68",
-        "type": "NORMAL",
+        "id": "P_68_0",
+        "type": "PARTIAL",
         "parents": [
             "9",
             "21",
             "24",
             "26",
-            "46",
+            "46"
+        ],
+        "level": 8,
+        "cost": 5
+    },
+    {
+        "id": "P_68_1",
+        "type": "PARTIAL",
+        "parents": [
             "51",
             "64"
         ],
         "level": 8,
-        "cost": 8
+        "cost": 2
+    },
+    {
+        "id": "68",
+        "type": "FUSION",
+        "parents": [
+            "P_68_0",
+            "P_68_1"
+        ],
+        "level": 9,
+        "cost": 2
     },
     {
         "id": "69",
@@ -784,14 +1108,22 @@
         "cost": 5
     },
     {
-        "id": "70",
-        "type": "NORMAL",
+        "id": "P_70_0",
+        "type": "PARTIAL",
         "parents": [
             "2",
             "3",
             "10",
             "23",
-            "24",
+            "24"
+        ],
+        "level": 8,
+        "cost": 5
+    },
+    {
+        "id": "P_70_1",
+        "type": "PARTIAL",
+        "parents": [
             "32",
             "34",
             "43",
@@ -799,57 +1131,130 @@
             "52"
         ],
         "level": 8,
-        "cost": 11
+        "cost": 5
     },
     {
-        "id": "71",
-        "type": "NORMAL",
+        "id": "70",
+        "type": "FUSION",
+        "parents": [
+            "P_70_0",
+            "P_70_1"
+        ],
+        "level": 9,
+        "cost": 2
+    },
+    {
+        "id": "P_71_0",
+        "type": "PARTIAL",
         "parents": [
             "8",
             "13",
             "21",
             "32",
-            "37",
+            "37"
+        ],
+        "level": 10,
+        "cost": 5
+    },
+    {
+        "id": "P_71_1",
+        "type": "PARTIAL",
+        "parents": [
             "40",
             "41",
             "51",
             "53",
-            "59",
+            "59"
+        ],
+        "level": 10,
+        "cost": 5
+    },
+    {
+        "id": "P_71_2",
+        "type": "PARTIAL",
+        "parents": [
             "66"
         ],
         "level": 10,
-        "cost": 12
+        "cost": 1
     },
     {
-        "id": "72",
-        "type": "NORMAL",
+        "id": "71",
+        "type": "FUSION",
+        "parents": [
+            "P_71_0",
+            "P_71_1",
+            "P_71_2"
+        ],
+        "level": 11,
+        "cost": 2
+    },
+    {
+        "id": "P_72_0",
+        "type": "PARTIAL",
         "parents": [
             "24",
             "33",
             "35",
             "42",
-            "43",
+            "43"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_72_1",
+        "type": "PARTIAL",
+        "parents": [
             "54",
             "55",
             "65"
         ],
         "level": 11,
-        "cost": 9
+        "cost": 3
     },
     {
-        "id": "73",
-        "type": "NORMAL",
+        "id": "72",
+        "type": "FUSION",
+        "parents": [
+            "P_72_0",
+            "P_72_1"
+        ],
+        "level": 12,
+        "cost": 2
+    },
+    {
+        "id": "P_73_0",
+        "type": "PARTIAL",
         "parents": [
             "15",
             "25",
             "30",
             "40",
-            "42",
+            "42"
+        ],
+        "level": 7,
+        "cost": 5
+    },
+    {
+        "id": "P_73_1",
+        "type": "PARTIAL",
+        "parents": [
             "48",
             "61"
         ],
         "level": 7,
-        "cost": 8
+        "cost": 2
+    },
+    {
+        "id": "73",
+        "type": "FUSION",
+        "parents": [
+            "P_73_0",
+            "P_73_1"
+        ],
+        "level": 8,
+        "cost": 2
     },
     {
         "id": "74",
@@ -861,14 +1266,22 @@
         "cost": 2
     },
     {
-        "id": "75",
-        "type": "NORMAL",
+        "id": "P_75_0",
+        "type": "PARTIAL",
         "parents": [
             "0",
             "2",
             "18",
             "22",
-            "36",
+            "36"
+        ],
+        "level": 9,
+        "cost": 5
+    },
+    {
+        "id": "P_75_1",
+        "type": "PARTIAL",
+        "parents": [
             "51",
             "55",
             "58",
@@ -876,7 +1289,17 @@
             "64"
         ],
         "level": 9,
-        "cost": 11
+        "cost": 5
+    },
+    {
+        "id": "75",
+        "type": "FUSION",
+        "parents": [
+            "P_75_0",
+            "P_75_1"
+        ],
+        "level": 10,
+        "cost": 2
     },
     {
         "id": "76",
@@ -891,30 +1314,56 @@
         "cost": 5
     },
     {
-        "id": "77",
-        "type": "NORMAL",
+        "id": "P_77_0",
+        "type": "PARTIAL",
         "parents": [
             "8",
             "16",
             "20",
             "28",
-            "58",
+            "58"
+        ],
+        "level": 9,
+        "cost": 5
+    },
+    {
+        "id": "P_77_1",
+        "type": "PARTIAL",
+        "parents": [
             "64",
             "70",
             "76"
         ],
         "level": 9,
-        "cost": 9
+        "cost": 3
     },
     {
-        "id": "78",
-        "type": "NORMAL",
+        "id": "77",
+        "type": "FUSION",
+        "parents": [
+            "P_77_0",
+            "P_77_1"
+        ],
+        "level": 10,
+        "cost": 2
+    },
+    {
+        "id": "P_78_0",
+        "type": "PARTIAL",
         "parents": [
             "0",
             "3",
             "4",
             "10",
-            "29",
+            "29"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_78_1",
+        "type": "PARTIAL",
+        "parents": [
             "32",
             "39",
             "47",
@@ -922,66 +1371,148 @@
             "67"
         ],
         "level": 11,
-        "cost": 11
+        "cost": 5
     },
     {
-        "id": "79",
-        "type": "NORMAL",
+        "id": "78",
+        "type": "FUSION",
+        "parents": [
+            "P_78_0",
+            "P_78_1"
+        ],
+        "level": 12,
+        "cost": 2
+    },
+    {
+        "id": "P_79_0",
+        "type": "PARTIAL",
         "parents": [
             "12",
             "18",
             "23",
             "24",
-            "26",
+            "26"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_79_1",
+        "type": "PARTIAL",
+        "parents": [
             "27",
             "32",
             "34",
             "38",
-            "39",
+            "39"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_79_2",
+        "type": "PARTIAL",
+        "parents": [
             "44",
             "52",
             "63",
             "72"
         ],
         "level": 12,
-        "cost": 15
+        "cost": 4
     },
     {
-        "id": "80",
-        "type": "NORMAL",
+        "id": "79",
+        "type": "FUSION",
+        "parents": [
+            "P_79_0",
+            "P_79_1",
+            "P_79_2"
+        ],
+        "level": 13,
+        "cost": 2
+    },
+    {
+        "id": "P_80_0",
+        "type": "PARTIAL",
         "parents": [
             "1",
             "6",
             "15",
             "32",
-            "42",
+            "42"
+        ],
+        "level": 10,
+        "cost": 5
+    },
+    {
+        "id": "P_80_1",
+        "type": "PARTIAL",
+        "parents": [
             "43",
             "52",
             "54",
             "59",
-            "60",
+            "60"
+        ],
+        "level": 10,
+        "cost": 5
+    },
+    {
+        "id": "P_80_2",
+        "type": "PARTIAL",
+        "parents": [
             "62",
             "67"
         ],
         "level": 10,
-        "cost": 13
+        "cost": 2
     },
     {
-        "id": "81",
-        "type": "NORMAL",
+        "id": "80",
+        "type": "FUSION",
+        "parents": [
+            "P_80_0",
+            "P_80_1",
+            "P_80_2"
+        ],
+        "level": 11,
+        "cost": 2
+    },
+    {
+        "id": "P_81_0",
+        "type": "PARTIAL",
         "parents": [
             "2",
             "26",
             "31",
             "45",
-            "56",
+            "56"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_81_1",
+        "type": "PARTIAL",
+        "parents": [
             "61",
             "68",
             "71",
             "73"
         ],
         "level": 11,
-        "cost": 10
+        "cost": 4
+    },
+    {
+        "id": "81",
+        "type": "FUSION",
+        "parents": [
+            "P_81_0",
+            "P_81_1"
+        ],
+        "level": 12,
+        "cost": 2
     },
     {
         "id": "82",
@@ -996,42 +1527,87 @@
         "cost": 5
     },
     {
-        "id": "83",
-        "type": "NORMAL",
+        "id": "P_83_0",
+        "type": "PARTIAL",
         "parents": [
             "11",
             "15",
             "41",
             "43",
-            "49",
+            "49"
+        ],
+        "level": 9,
+        "cost": 5
+    },
+    {
+        "id": "P_83_1",
+        "type": "PARTIAL",
+        "parents": [
             "51",
             "52",
             "62",
             "76"
         ],
         "level": 9,
-        "cost": 10
+        "cost": 4
     },
     {
-        "id": "84",
-        "type": "NORMAL",
+        "id": "83",
+        "type": "FUSION",
+        "parents": [
+            "P_83_0",
+            "P_83_1"
+        ],
+        "level": 10,
+        "cost": 2
+    },
+    {
+        "id": "P_84_0",
+        "type": "PARTIAL",
         "parents": [
             "3",
             "11",
             "22",
             "27",
-            "40",
+            "40"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_84_1",
+        "type": "PARTIAL",
+        "parents": [
             "41",
             "43",
             "51",
             "66",
-            "70",
+            "70"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_84_2",
+        "type": "PARTIAL",
+        "parents": [
             "73",
             "74",
             "78"
         ],
         "level": 12,
-        "cost": 14
+        "cost": 3
+    },
+    {
+        "id": "84",
+        "type": "FUSION",
+        "parents": [
+            "P_84_0",
+            "P_84_1",
+            "P_84_2"
+        ],
+        "level": 13,
+        "cost": 2
     },
     {
         "id": "85",
@@ -1057,42 +1633,87 @@
         "cost": 3
     },
     {
-        "id": "87",
-        "type": "NORMAL",
+        "id": "P_87_0",
+        "type": "PARTIAL",
         "parents": [
             "0",
             "6",
             "20",
             "21",
-            "25",
+            "25"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_87_1",
+        "type": "PARTIAL",
+        "parents": [
             "34",
             "37",
             "41",
             "46",
-            "59",
+            "59"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_87_2",
+        "type": "PARTIAL",
+        "parents": [
             "60",
             "61",
             "71"
         ],
         "level": 11,
-        "cost": 14
+        "cost": 3
     },
     {
-        "id": "88",
-        "type": "NORMAL",
+        "id": "87",
+        "type": "FUSION",
+        "parents": [
+            "P_87_0",
+            "P_87_1",
+            "P_87_2"
+        ],
+        "level": 12,
+        "cost": 2
+    },
+    {
+        "id": "P_88_0",
+        "type": "PARTIAL",
         "parents": [
             "0",
             "2",
             "8",
             "33",
-            "43",
+            "43"
+        ],
+        "level": 10,
+        "cost": 5
+    },
+    {
+        "id": "P_88_1",
+        "type": "PARTIAL",
+        "parents": [
             "56",
             "57",
             "62",
             "77"
         ],
         "level": 10,
-        "cost": 10
+        "cost": 4
+    },
+    {
+        "id": "88",
+        "type": "FUSION",
+        "parents": [
+            "P_88_0",
+            "P_88_1"
+        ],
+        "level": 11,
+        "cost": 2
     },
     {
         "id": "89",
@@ -1105,33 +1726,68 @@
         "cost": 3
     },
     {
-        "id": "90",
-        "type": "NORMAL",
+        "id": "P_90_0",
+        "type": "PARTIAL",
         "parents": [
             "5",
             "9",
             "16",
             "17",
-            "25",
+            "25"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_90_1",
+        "type": "PARTIAL",
+        "parents": [
             "29",
             "45",
             "52",
             "55",
-            "68",
+            "68"
+        ],
+        "level": 11,
+        "cost": 5
+    },
+    {
+        "id": "P_90_2",
+        "type": "PARTIAL",
+        "parents": [
             "88"
         ],
         "level": 11,
-        "cost": 12
+        "cost": 1
     },
     {
-        "id": "91",
-        "type": "NORMAL",
+        "id": "90",
+        "type": "FUSION",
+        "parents": [
+            "P_90_0",
+            "P_90_1",
+            "P_90_2"
+        ],
+        "level": 12,
+        "cost": 2
+    },
+    {
+        "id": "P_91_0",
+        "type": "PARTIAL",
         "parents": [
             "29",
             "34",
             "39",
             "42",
-            "49",
+            "49"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_91_1",
+        "type": "PARTIAL",
+        "parents": [
             "54",
             "57",
             "58",
@@ -1139,110 +1795,245 @@
             "89"
         ],
         "level": 12,
-        "cost": 11
+        "cost": 5
     },
     {
-        "id": "92",
-        "type": "NORMAL",
+        "id": "91",
+        "type": "FUSION",
+        "parents": [
+            "P_91_0",
+            "P_91_1"
+        ],
+        "level": 13,
+        "cost": 2
+    },
+    {
+        "id": "P_92_0",
+        "type": "PARTIAL",
         "parents": [
             "2",
             "17",
             "39",
             "46",
-            "53",
+            "53"
+        ],
+        "level": 9,
+        "cost": 5
+    },
+    {
+        "id": "P_92_1",
+        "type": "PARTIAL",
+        "parents": [
             "58",
             "70"
         ],
         "level": 9,
-        "cost": 8
+        "cost": 2
     },
     {
-        "id": "93",
-        "type": "NORMAL",
+        "id": "92",
+        "type": "FUSION",
+        "parents": [
+            "P_92_0",
+            "P_92_1"
+        ],
+        "level": 10,
+        "cost": 2
+    },
+    {
+        "id": "P_93_0",
+        "type": "PARTIAL",
         "parents": [
             "6",
             "30",
             "34",
             "36",
-            "43",
+            "43"
+        ],
+        "level": 13,
+        "cost": 5
+    },
+    {
+        "id": "P_93_1",
+        "type": "PARTIAL",
+        "parents": [
             "56",
             "59",
             "91"
         ],
         "level": 13,
-        "cost": 9
+        "cost": 3
     },
     {
-        "id": "94",
-        "type": "NORMAL",
+        "id": "93",
+        "type": "FUSION",
+        "parents": [
+            "P_93_0",
+            "P_93_1"
+        ],
+        "level": 14,
+        "cost": 2
+    },
+    {
+        "id": "P_94_0",
+        "type": "PARTIAL",
         "parents": [
             "3",
             "6",
             "18",
             "34",
-            "52",
+            "52"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_94_1",
+        "type": "PARTIAL",
+        "parents": [
             "57",
             "65",
             "66",
             "72",
-            "75",
+            "75"
+        ],
+        "level": 12,
+        "cost": 5
+    },
+    {
+        "id": "P_94_2",
+        "type": "PARTIAL",
+        "parents": [
             "76",
             "83"
         ],
         "level": 12,
-        "cost": 13
+        "cost": 2
     },
     {
-        "id": "95",
-        "type": "NORMAL",
+        "id": "94",
+        "type": "FUSION",
+        "parents": [
+            "P_94_0",
+            "P_94_1",
+            "P_94_2"
+        ],
+        "level": 13,
+        "cost": 2
+    },
+    {
+        "id": "P_95_0",
+        "type": "PARTIAL",
         "parents": [
             "9",
             "20",
             "27",
             "54",
-            "70",
+            "70"
+        ],
+        "level": 13,
+        "cost": 5
+    },
+    {
+        "id": "P_95_1",
+        "type": "PARTIAL",
+        "parents": [
             "88",
             "91"
         ],
         "level": 13,
-        "cost": 8
+        "cost": 2
     },
     {
-        "id": "96",
-        "type": "NORMAL",
+        "id": "95",
+        "type": "FUSION",
+        "parents": [
+            "P_95_0",
+            "P_95_1"
+        ],
+        "level": 14,
+        "cost": 2
+    },
+    {
+        "id": "P_96_0",
+        "type": "PARTIAL",
         "parents": [
             "2",
             "8",
             "11",
             "12",
-            "15",
+            "15"
+        ],
+        "level": 14,
+        "cost": 5
+    },
+    {
+        "id": "P_96_1",
+        "type": "PARTIAL",
+        "parents": [
             "27",
             "30",
             "31",
             "34",
-            "37",
+            "37"
+        ],
+        "level": 14,
+        "cost": 5
+    },
+    {
+        "id": "P_96_2",
+        "type": "PARTIAL",
+        "parents": [
             "51",
             "59",
             "63",
             "65",
-            "79",
+            "79"
+        ],
+        "level": 14,
+        "cost": 5
+    },
+    {
+        "id": "P_96_3",
+        "type": "PARTIAL",
+        "parents": [
             "81",
             "86",
             "89",
             "93"
         ],
         "level": 14,
-        "cost": 20
+        "cost": 4
     },
     {
-        "id": "97",
-        "type": "NORMAL",
+        "id": "96",
+        "type": "FUSION",
+        "parents": [
+            "P_96_0",
+            "P_96_1",
+            "P_96_2",
+            "P_96_3"
+        ],
+        "level": 15,
+        "cost": 2
+    },
+    {
+        "id": "P_97_0",
+        "type": "PARTIAL",
         "parents": [
             "1",
             "6",
             "9",
             "19",
-            "25",
+            "25"
+        ],
+        "level": 13,
+        "cost": 5
+    },
+    {
+        "id": "P_97_1",
+        "type": "PARTIAL",
+        "parents": [
             "31",
             "37",
             "38",
@@ -1250,43 +2041,98 @@
             "94"
         ],
         "level": 13,
-        "cost": 11
+        "cost": 5
     },
     {
-        "id": "98",
-        "type": "NORMAL",
+        "id": "97",
+        "type": "FUSION",
+        "parents": [
+            "P_97_0",
+            "P_97_1"
+        ],
+        "level": 14,
+        "cost": 2
+    },
+    {
+        "id": "P_98_0",
+        "type": "PARTIAL",
         "parents": [
             "6",
             "30",
             "33",
             "37",
-            "44",
+            "44"
+        ],
+        "level": 13,
+        "cost": 5
+    },
+    {
+        "id": "P_98_1",
+        "type": "PARTIAL",
+        "parents": [
             "48",
             "83",
             "85",
             "89"
         ],
         "level": 13,
-        "cost": 10
+        "cost": 4
     },
     {
-        "id": "99",
-        "type": "NORMAL",
+        "id": "98",
+        "type": "FUSION",
+        "parents": [
+            "P_98_0",
+            "P_98_1"
+        ],
+        "level": 14,
+        "cost": 2
+    },
+    {
+        "id": "P_99_0",
+        "type": "PARTIAL",
         "parents": [
             "15",
             "16",
             "19",
             "29",
-            "40",
+            "40"
+        ],
+        "level": 14,
+        "cost": 5
+    },
+    {
+        "id": "P_99_1",
+        "type": "PARTIAL",
+        "parents": [
             "46",
             "48",
             "58",
             "83",
-            "84",
+            "84"
+        ],
+        "level": 14,
+        "cost": 5
+    },
+    {
+        "id": "P_99_2",
+        "type": "PARTIAL",
+        "parents": [
             "93",
             "97"
         ],
         "level": 14,
-        "cost": 13
+        "cost": 2
+    },
+    {
+        "id": "99",
+        "type": "FUSION",
+        "parents": [
+            "P_99_0",
+            "P_99_1",
+            "P_99_2"
+        ],
+        "level": 15,
+        "cost": 2
     }
 ]
